@@ -4,7 +4,8 @@ const line = document.querySelector(".line")
 const lock = document.querySelector(".lock")
 const modal = document.querySelector(".modal")
 const hero = document.querySelector(".hero")
-const h1Tag = document.querySelectorAll(".user_name")
+const header = document.querySelector("header")
+const main = document.querySelector("main")
 
 langageAll.forEach((langage) => {
     langage.addEventListener("click", () => {
@@ -24,7 +25,10 @@ lock.addEventListener("click", () => {
         hero.classList.add("remove")
     }, 500);
     setTimeout(() => {
+        header.classList.add("active")
+        main.classList.add("active")
+    }, 800)
+    setTimeout(() => {
         modal.classList.add("remove")
-        h1Tag.forEach((item)=> item.classList.add("active"))
     }, 1000);
 })
