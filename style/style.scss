@@ -361,7 +361,12 @@ nav {
             h1 {
                 font-size: 100px;
                 font-weight: 300;
-                // display: none;
+                text-align: center;
+                line-height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
 
                 &.active {
                     display: block;

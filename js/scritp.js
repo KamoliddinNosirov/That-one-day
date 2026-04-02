@@ -10,6 +10,9 @@ const audio = document.querySelector("audio")
 const audioBtn = document.querySelector(".audio")
 const uzLang = document.querySelector(".uzTil")
 const ruLang = document.querySelector(".ruTil")
+const langRU = document.querySelector(".langRu")
+const langUz = document.querySelector(".langUz")
+
 
 let language = "uz"
 
@@ -23,6 +26,20 @@ uzLang.addEventListener("click", () => {
 ruLang.addEventListener("click", () => {
   ruLang.classList.add("active")
   uzLang.classList.remove("active")
+  language = "ru"
+  writeData()
+})
+
+langUz.addEventListener("click", () => {
+  langUz.classList.add("active")
+  langRU.classList.remove("active")
+  language = "uz"
+  writeData()
+})
+
+langRU.addEventListener("click", () => {
+  langRU.classList.add("active")
+  langUz.classList.remove("active")
   language = "ru"
   writeData()
 })
@@ -41,7 +58,7 @@ lock.addEventListener("click", () => {
     header.classList.add("active")
     main.classList.add("active")
     footer.classList.add("active")
-    audio.play()
+    // audio.play()
   }, 800)
   setTimeout(() => {
     modal.classList.add("remove")
@@ -50,7 +67,7 @@ lock.addEventListener("click", () => {
 
 
 audioBtn.addEventListener("click", () => {
-  audio.play()
+  // audio.play()
 })
 
 /////////////////////////////////////////////////////
@@ -114,7 +131,7 @@ const client = {
     ariaGiftSection: "Подарок жениху",
     ariaCountdown: "Обратный отсчет",
     introTitle:
-      "<span class=\"intro-title__line\">ВАМ ПРИШЛО</span><br/><span class=\"intro-title__line\">ПРИГЛАШЕНИЕ</span>",
+      "<span class=\"intro-title__line\">ВАМ <br/> ПРИШЛО</span><br/><span class=\"intro-title__line\">ПРИГЛАШЕНИЕ</span>",
     unlockHint:
       "<span class=\"intro-unlock__line\">Разблокируйте,</span><span class=\"intro-unlock__line\">нажав на замочек</span>",
     unlockInvitationLabel: "Открыть приглашение",
@@ -186,7 +203,7 @@ const client = {
     introTitle:
       "<span class=\"intro-title__line\">SIZGA</span><br/><span class=\"intro-title__line\">TAKLIFNOMA</span><br/><span class=\"intro-title__line\">KELDI</span>",
     unlockHint:
-      "<span class=\"intro-unlock__line\">Qulfchani bosib,</span><span class=\"intro-unlock__line\">taklifnomani oching</span>",
+      "<span class=\"intro-unlock__line\">Qulfchani bosib, </span><span class=\"intro-unlock__line\">taklifnomani oching</span>",
     unlockInvitationLabel: "Taklifnomani ochish",
     envelopeTopNote:
       "<span class=\"flap-note-top\">SIZ</span><span class=\"flap-note-middle\">TO'YIMIZGA</span><span class=\"flap-note-script\">taklif etilgansiz</span>",
@@ -200,7 +217,7 @@ const client = {
     ornamentMonth: "04",
     ornamentYear: "26",
     heroNames:
-      "<span class=\"hero-title__line\">Aziz va qadrdon</span><span class=\"hero-title__line\">insonimiz!</span>",
+      "<span class=\"hero-title__line\">Aziz va qadrdon </span><span class=\"hero-title__line\">insonimiz!</span>",
     openHere: "ochish",
     lead: "Hayotimizdagi eng baxtli kunlardan biri - nikoh to'yimizni siz bilan birga nishonlashni niyat qildik.<br /><br />Sizni ushbu kechamizga samimiy taklif etamiz.<br /><br /><strong>Quvonchli kunimizda aziz mehmonimiz bo'lishingizni intizorlik bilan kutamiz.</strong>",
     scrollHint: "Pastga suring",
@@ -245,23 +262,30 @@ const client = {
 const h1_tag = document.querySelector(".h1-tag")
 const pTag = document.querySelector(".ptag")
 const box = document.querySelector(".box")
+const scrol = document.querySelector(".scrol")
+const sarlavha = document.querySelector(".sarlavha")
+const leadBtn = document.querySelector(".lead")
 
 const writeData = () => {
   if (language === "uz") {
     h1_tag.innerHTML = client.uz.introTitle
     pTag.innerHTML = client.uz.unlockHint
     box.innerHTML = `
-                   <h1 class="user_name">${client.uz.ornamentNames}</h1>
+                   <h1 style="line-height: 50px;"  class="user_name">${client.uz.ornamentNames}</h1>
     `
+    scrol.innerHTML = client.uz.scrollHint
+    sarlavha.innerHTML = client.uz.heroNames
+    leadBtn.innerHTML = client.uz.lead
 
   } else {
     h1_tag.innerHTML = client.ru.introTitle
     pTag.innerHTML = client.ru.unlockHint
     box.innerHTML = `
-                   <h1 class="user_name">${client.ru}</h1>
-                    <p>VA</p>
-                    <h1 class="user_name">${client.ru}</h1>
+                   <h1 style="line-height: 90px;"  class="user_name">${client.ru.ornamentNames}</h1>
     `
+    scrol.innerHTML = client.ru.scrollHint
+    sarlavha.innerHTML = client.ru.heroNames
+    leadBtn.innerHTML = client.ru.lead
   }
 }
 

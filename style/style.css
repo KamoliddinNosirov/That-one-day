@@ -322,6 +322,12 @@ nav .container p span.active {
 .hero .container .box h1 {
   font-size: 100px;
   font-weight: 300;
+  text-align: center;
+  line-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .hero .container .box h1.active {
   display: block;
