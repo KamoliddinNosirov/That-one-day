@@ -24,8 +24,8 @@ uzLang.addEventListener("click", () => {
 })
 
 ruLang.addEventListener("click", () => {
-  ruLang.classList.add("active")
   uzLang.classList.remove("active")
+  ruLang.classList.add("active")
   language = "ru"
   writeData()
 })
@@ -268,6 +268,8 @@ const leadBtn = document.querySelector(".lead")
 
 const writeData = () => {
   if (language === "uz") {
+    uzLang.classList.add("active")
+    langUz.classList.add("active")
     h1_tag.innerHTML = client.uz.introTitle
     pTag.innerHTML = client.uz.unlockHint
     box.innerHTML = `
@@ -278,6 +280,9 @@ const writeData = () => {
     leadBtn.innerHTML = client.uz.lead
 
   } else {
+    ruLang.classList.add("active")
+    langUz.classList.remove("active")
+    langRU.classList.add("active")
     h1_tag.innerHTML = client.ru.introTitle
     pTag.innerHTML = client.ru.unlockHint
     box.innerHTML = `
