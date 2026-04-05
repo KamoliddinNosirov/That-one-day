@@ -442,8 +442,9 @@ main .section2 .container .section-info {
   padding-top: 20px;
 }
 main .section2 .container .section-info h1 {
-  font-size: 110px;
+  font-size: 80px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 main .section2 .container .section-info .calendar-grid {
   width: min(520px, 100% - clamp(2rem, 7vw, 4rem));

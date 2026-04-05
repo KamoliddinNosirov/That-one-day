@@ -151,7 +151,7 @@ const client = {
     openHere: "нажмите",
     lead: "В этот прекрасный день мы соединяем наши сердца и начинаем новую историю - историю нашей любви.<br /><br />Будем счастливы разделить радость этого особенного момента вместе с вами.<br /><br /><strong>С любовью приглашаем вас на нашу свадьбу.</strong>",
     scrollHint: "Листайте вниз",
-    calendarMonth: "АПРЕЛЬ 2026",
+    calendarMonth: "ДЕкабыр 2026",
     weekdayMon: "ПН",
     weekdayTue: "ВТ",
     weekdayWed: "СР",
@@ -221,7 +221,7 @@ const client = {
     openHere: "ochish",
     lead: "Hayotimizdagi eng baxtli kunlardan biri - nikoh to'yimizni siz bilan birga nishonlashni niyat qildik.<br /><br />Sizni ushbu kechamizga samimiy taklif etamiz.<br /><br /><strong>Quvonchli kunimizda aziz mehmonimiz bo'lishingizni intizorlik bilan kutamiz.</strong>",
     scrollHint: "Pastga suring",
-    calendarMonth: "APREL 2026",
+    calendarMonth: "Dekabr 2027",
     weekdayMon: "DU",
     weekdayTue: "SE",
     weekdayWed: "CHOR",
@@ -265,6 +265,8 @@ const box = document.querySelector(".box")
 const scrol = document.querySelector(".scrol")
 const sarlavha = document.querySelector(".sarlavha")
 const leadBtn = document.querySelector(".lead")
+const kalendar = document.querySelector(".kalendar")
+const week_days = document.querySelector(".week-days")
 
 const writeData = () => {
   if (language === "uz") {
@@ -278,6 +280,16 @@ const writeData = () => {
     scrol.innerHTML = client.uz.scrollHint
     sarlavha.innerHTML = client.uz.heroNames
     leadBtn.innerHTML = client.uz.lead
+    kalendar.innerHTML = client.uz.calendarMonth
+    week_days.innerHTML = `
+                        <span>${client.uz.weekdayMon}</span>
+                        <span>${client.uz.weekdayTue}</span>
+                        <span>${client.uz.weekdayWed}</span>
+                        <span>${client.uz.weekdayThu}</span>
+                        <span>${client.uz.weekdayFri}</span>
+                        <span>${client.uz.weekdaySat}</span>
+                        <span>${client.uz.weekdaySun}</span>
+    `
 
   } else {
     ruLang.classList.add("active")
@@ -291,6 +303,16 @@ const writeData = () => {
     scrol.innerHTML = client.ru.scrollHint
     sarlavha.innerHTML = client.ru.heroNames
     leadBtn.innerHTML = client.ru.lead
+    kalendar.innerHTML = client.ru.calendarMonth
+     week_days.innerHTML = `
+                        <span>${client.ru.weekdayMon}</span>
+                        <span>${client.ru.weekdayTue}</span>
+                        <span>${client.ru.weekdayWed}</span>
+                        <span>${client.ru.weekdayThu}</span>
+                        <span>${client.ru.weekdayFri}</span>
+                        <span>${client.ru.weekdaySat}</span>
+                        <span>${client.ru.weekdaySun}</span>
+    `
   }
 }
 
