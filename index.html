@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="icon" type="/imgs.png" href="/imgs/oneday.png" />
     <title>That one day</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,7 +48,7 @@
             </div>
         </div>
     </div>
-    <header class="">
+    <header data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-out-cubic">
         <nav class="main-nav">
             <div class="container">
                 <span class="audio">
@@ -79,17 +80,18 @@
             </div>
         </div>
     </header>
-    <main class="">
-        <section class="section1">
+    <main>
+        <section data-aos="fade-up" data-aos-duration="3000" class="section1">
             <div class="container">
                 <div class="section-info">
                     <h1 class="sarlavha">Aziz va qadirdon insonimiz!</h1>
-                    <h5 class="lead">Hayotimizdagi eng baxtli kunlardan biri - nikoh to'yimizni siz bilan birga nishonlashni niyat
+                    <h5 class="lead">Hayotimizdagi eng baxtli kunlardan biri - nikoh to'yimizni siz bilan birga
+                        nishonlashni niyat
                         qildik.</h5>
                 </div>
             </div>
         </section>
-        <section class="section2">
+        <section data-aos="fade-up" data-aos-duration="3000" class="section2">
             <div class="container">
                 <div class="section-info">
                     <hr>
@@ -139,29 +141,29 @@
                 </div>
             </div>
         </section>
-        <section class="section3">
+        <section data-aos="fade-up" data-aos-duration="3000" class="section3">
             <div class="container">
                 <div class="block">
                     <div class="imgs">
                         <img src="./imgs/red building.png" alt="">
                     </div>
-                    <div class="info-section">
+                    <div class="info-section info-section3">
                         <h1>To'y manzili</h1>
                         <h3>"Roxat" <br> tantanalar saroyi</h3>
                         <p>Vaqti: 18:00</p>
                         <p class="manzil">Manzil: Chilonzor tumani, Arnasoy ko'chasi 7/2.</p>
                     </div>
                     <div class="buttons">
-                        <button>Yandex xaritasi</button>
-                        <button>Google maps</button>
+                        <button class="button1">Yandex xaritasi</button>
+                        <button class="button2">Google maps</button>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section4">
+        <section data-aos="fade-up" data-aos-duration="3000" class="section4">
             <div class="container">
                 <div class="block">
-                    <div class="section-info">
+                    <div class="section-info section-info1">
                         <h1>To'yona</h1>
                         <p>Agar istasangiz, to'yonani kuyov kartasiga yuborishingiz mumkin.</p>
                         <div class="card">
@@ -180,32 +182,32 @@
                 </div>
             </div>
         </section>
-        <section class="section5">
+        <section data-aos="fade-up" data-aos-duration="3000" class="section5">
             <div class="container">
                 <div class="section-info">
-                    <h1>Har lahzani sanayapmiz</h1>
+                    <h1 class="lahza">Har lahzani sanayapmiz</h1>
                     <div class="count-down">
                         <div class="time-unit">
                             <span class="kun">07</span>
-                            <small>Kun</small>
+                            <small class="kunName">Kun</small>
                         </div>
                         <span class="dot">:</span>
                         <div class="time-unit">
                             <span class="soat">03</span>
-                            <small>Soat</small>
+                            <small class="soatName">Soat</small>
                         </div>
                         <span class="dot">:</span>
                         <div class="time-unit">
                             <span class="daqiqa">02</span>
-                            <small>Daqiqa</small>
+                            <small class="daqiqaName">Daqiqa</small>
                         </div>
                         <span class="dot">:</span>
                         <div class="time-unit">
                             <span class="second">01</span>
-                            <small>Soniya</small>
+                            <small class="soniyaName">Soniya</small>
                         </div>
                     </div>
-                    <p>Sizni intiqlik bilan kutamiz</p>
+                    <p class="songisi">Sizni intiqlik bilan kutamiz</p>
                     <div class="ring">
                         <img src="./imgs/red ring.png" alt="">
                     </div>
@@ -220,5 +222,9 @@
     </footer>
 </body>
 <script src="./js/scritp.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </html>

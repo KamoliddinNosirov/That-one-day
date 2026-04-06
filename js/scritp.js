@@ -51,19 +51,21 @@ like.addEventListener("click", () => {
 
 lock.addEventListener("click", () => {
   modal.classList.add("active")
+
   setTimeout(() => {
     hero.classList.add("remove")
   }, 500);
+
   setTimeout(() => {
+    modal.classList.add("remove")
+
     header.classList.add("active")
     main.classList.add("active")
     footer.classList.add("active")
-    // audio.play()
-  }, 800)
-  setTimeout(() => {
-    modal.classList.add("remove")
+
+    AOS.refresh(); // 🔥 SHU MUHIM
   }, 1000);
-})
+});
 
 
 audioBtn.addEventListener("click", () => {
@@ -118,9 +120,9 @@ const timerId = setInterval(() => {
 
 const client = {
   ru: {
-    pageTitle: "Темурбек и Нодирабегим | Свадебное приглашение",
-    metaDescription: "Свадебное приглашение Темурбека и Нодирабегим на 5 апреля 2026 года.",
-    previewImageAlt: "Свадебное приглашение Темурбека и Нодирабегим",
+    pageTitle: "Камолиддин и Гулсанамхон | Свадебное приглашение",
+    metaDescription: "Свадебное приглашение Камолиддин и Гулсанамхон на 5 апреля 2026 года.",
+    previewImageAlt: "Свадебное приглашение Камолиддин и Гулсанамхон",
     ariaIntro: "Экран открытия приглашения",
     ariaEnvelope: "Запечатанный бумажный конверт",
     ariaWeddingDate: "Дата свадьбы",
@@ -138,9 +140,9 @@ const client = {
     envelopeTopNote:
       "<span class=\"flap-note-top\">ВЫ</span><span class=\"flap-note-middle\">ПРИГЛАШЕНЫ</span><span class=\"flap-note-script\">на свадьбу</span>",
     withLove: "с любовью,",
-    signatureNames: "Темурбек\u00a0и\u00a0Нодирабегим",
+    signatureNames: "Камолиддин\u00a0и\u00a0Gulsanamxon",
     ornamentNames:
-      "<span class=\"ornament-name-line\">Темурбек</span><span class=\"ornament-name-amp\">и</span><span class=\"ornament-name-line\">Нодирабегим</span>",
+      "<span class=\"ornament-name-line\">Камолиддин</span><span class=\"ornament-name-amp\">и</span><span class=\"ornament-name-line\">Гулсанамхон</span>",
     ornamentMessage:
       "Аллах объединил их сердца любовью<br />(сура «Аль-Анфаль», аят 63)",
     ornamentDay: "05",
@@ -168,7 +170,7 @@ const client = {
     giftTitle: "Подарок",
     giftLead: "Если вам будет удобно, теплые пожелания можно дополнить подарком на карту жениха.",
     giftRecipientLabel: "Получатель",
-    giftRecipientName: "Темурбек",
+    giftRecipientName: "Камолиддин",
     giftCardLabel: "Номер карты",
     giftCardNote: "Нажмите на кнопку ниже, чтобы быстро скопировать номер карты.",
     giftCopyAction: "Скопировать номер",
@@ -188,9 +190,9 @@ const client = {
     musicPauseLabel: "Остановить музыку",
   },
   uz: {
-    pageTitle: "Temurbek va Nodirabegim | To'y taklifnomasi",
-    metaDescription: "Temurbek va Nodirabegimning 2026-yil 5-aprel kungi to'y taklifnomasi.",
-    previewImageAlt: "Temurbek va Nodirabegimning to'y taklifnomasi",
+    pageTitle: "Kamoliddin va Gulsanamxon | To'y taklifnomasi",
+    metaDescription: "Kamoliddin va Gulsanamxon 2026-yil 5-aprel kungi to'y taklifnomasi.",
+    previewImageAlt: "Kamoliddin va Gulsanamxon to'y taklifnomasi",
     ariaIntro: "Taklifnomani ochish ekrani",
     ariaEnvelope: "Muhrlangan qog'oz konvert",
     ariaWeddingDate: "To'y sanasi",
@@ -208,9 +210,9 @@ const client = {
     envelopeTopNote:
       "<span class=\"flap-note-top\">SIZ</span><span class=\"flap-note-middle\">TO'YIMIZGA</span><span class=\"flap-note-script\">taklif etilgansiz</span>",
     withLove: "muhabbat ila,",
-    signatureNames: "Temurbek\u00a0va\u00a0Nodirabegim",
+    signatureNames: "Kamoliddin\u00a0va\u00a0Gulsanamxon",
     ornamentNames:
-      "<span class=\"user_name\">Temurbek</span><br/><span class=\"ornament-name-amp\">va</span><br/><span class=\"user_name\">Nodirabegim</span>",
+      "<span class=\"user_name\">Kamoliddin</span><br/><span class=\"ornament-name-amp\">va</span><br/><span class=\"user_name\">Gulsanamxon</span>",
     ornamentMessage:
       "Alloh ularni qalbini sevgi ila birlashtirdi<br />(Anfol surasi, 63-oyat)",
     ornamentDay: "05",
@@ -238,7 +240,7 @@ const client = {
     giftTitle: "To'yona",
     giftLead: "Agar istasangiz, to'yonani kuyov kartasiga yuborishingiz mumkin.",
     giftRecipientLabel: "Qabul qiluvchi",
-    giftRecipientName: "Temurbek",
+    giftRecipientName: "Kamoliddin",
     giftCardLabel: "Karta raqami",
     giftCardNote: "Quyidagi tugma orqali karta raqamini tezda nusxalashingiz mumkin.",
     giftCopyAction: "Raqamni nusxalash",
@@ -267,6 +269,17 @@ const sarlavha = document.querySelector(".sarlavha")
 const leadBtn = document.querySelector(".lead")
 const kalendar = document.querySelector(".kalendar")
 const week_days = document.querySelector(".week-days")
+const info_section = document.querySelector(".info-section3")
+const section_info1 = document.querySelector(".section-info1")
+const button1 = document.querySelector(".button1")
+const button2 = document.querySelector(".button2")
+const Kun = document.querySelector('.kunName');
+const Hours = document.querySelector('.soatName');
+const Minut = document.querySelector('.daqiqaName');
+const Soniya = document.querySelector('.soniyaName');
+const lahza = document.querySelector('.lahza');
+const songi = document.querySelector('.songisi');
+
 
 const writeData = () => {
   if (language === "uz") {
@@ -290,6 +303,36 @@ const writeData = () => {
                         <span>${client.uz.weekdaySat}</span>
                         <span>${client.uz.weekdaySun}</span>
     `
+    info_section.innerHTML = `
+                        <h1>${client.uz.locationTitle}</h1>
+                        <h3>${client.uz.venueName}</h3>
+                        <p>${client.uz.venueTime}</p>
+                        <p class="manzil">${client.uz.venueAddress}</p>
+    `
+    button1.innerHTML = client.uz.mapLinkYandex
+    button2.innerHTML = client.uz.mapLinkGoogle
+    section_info1.innerHTML = `
+                        <h1>${client.uz.giftTitle}</h1>
+                        <p>${client.uz.giftLead}</p>
+                        <div class="card">
+                            <div class="user">
+                                <p class="ptag">${client.uz.giftRecipientLabel}</p>
+                                <h1>${client.uz.giftRecipientName}</h1>
+                            </div>
+                            <div class="card-number">
+                                <p>${client.uz.giftCardLabel}</p>
+                                <h2><span>8600</span><span>0000</span><span> 0000</span><span> 0000</span></h2>
+                                <h4>${client.uz.giftCardNote}</h4>
+                            </div>
+                            <button>${client.uz.giftCopyAction}</button>
+    `
+    lahza.innerHTML = client.uz.countdownTitle
+    Kun.innerHTML = client.uz.unitDays
+    Hours.innerHTML = client.uz.unitHours
+    Minut.innerHTML = client.uz.unitMinutes
+    Soniya.innerHTML = client.uz.unitSeconds
+    songi.innerHTML = client.uz.countdownWaiting
+
 
   } else {
     ruLang.classList.add("active")
@@ -304,7 +347,7 @@ const writeData = () => {
     sarlavha.innerHTML = client.ru.heroNames
     leadBtn.innerHTML = client.ru.lead
     kalendar.innerHTML = client.ru.calendarMonth
-     week_days.innerHTML = `
+    week_days.innerHTML = `
                         <span>${client.ru.weekdayMon}</span>
                         <span>${client.ru.weekdayTue}</span>
                         <span>${client.ru.weekdayWed}</span>
@@ -313,6 +356,36 @@ const writeData = () => {
                         <span>${client.ru.weekdaySat}</span>
                         <span>${client.ru.weekdaySun}</span>
     `
+    info_section.innerHTML = `
+                        <h1>${client.ru.locationTitle}</h1>
+                        <h3>${client.ru.venueName}</h3>
+                        <p>${client.ru.venueTime}</p>
+                        <p class="manzil">${client.ru.venueAddress}</p>
+    `
+    button1.innerHTML = client.ru.mapLinkYandex
+    button2.innerHTML = client.ru.mapLinkGoogle
+    section_info1.innerHTML = `
+                        <h1>${client.ru.giftTitle}</h1>
+                        <p>${client.ru.giftLead}</p>
+                        <div class="card">
+                            <div class="user">
+                                <p class="ptag">${client.ru.giftRecipientLabel}</p>
+                                <h1>${client.ru.giftRecipientName}</h1>
+                            </div>
+                            <div class="card-number">
+                                <p>${client.ru.giftCardLabel}</p>
+                                <h2><span>8600</span><span>0000</span><span> 0000</span><span> 0000</span></h2>
+                                <h4>${client.ru.giftCardNote}</h4>
+                            </div>
+                            <button>${client.ru.giftCopyAction}</button>
+    `
+    lahza.innerHTML = client.ru.countdownTitle
+    Kun.innerHTML = client.ru.unitDays
+    Hours.innerHTML = client.ru.unitHours
+    Minut.innerHTML = client.ru.unitMinutes
+    Soniya.innerHTML = client.ru.unitSeconds
+    songi.innerHTML = client.ru.countdownWaiting
+
   }
 }
 
