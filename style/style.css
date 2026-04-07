@@ -798,6 +798,8 @@ footer .container p {
   border: none !important;
   background-color: transparent;
   font-size: 35px;
+}
+.btn-top a {
   color: var(--gold-soft);
 }
 .btn-top:hover {

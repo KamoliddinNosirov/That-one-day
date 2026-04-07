@@ -929,7 +929,10 @@ footer {
     border: none !important;
     background-color: transparent;
     font-size: 35px;
-    color: var(--gold-soft);
+
+    a {
+        color: var(--gold-soft);
+    }
 
     &:hover {
         transform: translateY(-3px);
