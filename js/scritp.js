@@ -390,3 +390,16 @@ const writeData = () => {
 }
 
 writeData()
+
+
+
+const bgheader = ()=>{
+  const btn_top = document.querySelector(".btn-top")
+  if(window.scrollY / 3 > 1000){
+    btn_top.classList.add("scroll-show")
+  }else{
+    btn_top.classList.remove("scroll-show")
+  }
+}
+
+window.addEventListener("scroll", bgheader)

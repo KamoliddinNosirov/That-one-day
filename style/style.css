@@ -19,6 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 p,
@@ -776,13 +777,33 @@ main .section5 .container .section-info .ring img {
 footer {
   border-top: 1px solid rgba(108, 108, 108, 0.12);
   padding: 40px;
+  overflow: hidden;
 }
 footer .container {
   text-align: center;
+  position: relative;
 }
 footer .container p {
   width: 190px;
   margin: 0 auto;
   padding-bottom: 5px;
   border-bottom: 1px solid rgba(108, 108, 108, 0.12);
+}
+
+.btn-top {
+  position: fixed;
+  right: 50px;
+  bottom: -100px;
+  transition: all 1s ease;
+  border: none !important;
+  background-color: transparent;
+  font-size: 35px;
+  color: var(--gold-soft);
+}
+.btn-top:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+.btn-top.scroll-show {
+  bottom: 50px;
 }/*# sourceMappingURL=style.css.map */
