@@ -943,3 +943,10 @@ footer {
         bottom: 50px;
     }
 }
+
+
+@media (max-width: 467px) {
+    .container {
+        width: 100%;
+    }
+}
