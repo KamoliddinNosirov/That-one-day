@@ -908,4 +908,60 @@ footer .container p {
     width: 40%;
     padding: 10px 0px;
   }
+  .section4 .container .block {
+    width: 100% !important;
+  }
+  .section4 .container .block .section-info h1 {
+    font-size: 30px !important;
+  }
+  .section4 .container .block .section-info p {
+    font-size: 18px !important;
+    width: 90% !important;
+  }
+  .section4 .container .block .section-info .card {
+    width: 100% !important;
+    padding: 20px 20px !important;
+  }
+  .section4 .container .block .section-info .card .user p {
+    font-size: 18px !important;
+  }
+  .section4 .container .block .section-info .card .user h1 {
+    font-size: 18px !important;
+    font-weight: bold !important;
+  }
+  .section4 .container .block .section-info .card .card-number p {
+    font-size: 18px !important;
+  }
+  .section4 .container .block .section-info .card .card-number h2 {
+    font-size: 18px !important;
+    gap: 10px !important;
+  }
+  .section4 .container .block .section-info .card .card-number h4 {
+    width: 100% !important;
+    font-size: 17px !important;
+  }
+  .section4 .container .block .section-info .card button {
+    font-size: 16px !important;
+  }
+  .section5 .container .section-info {
+    width: 100% !important;
+  }
+  .section5 .container .section-info h1 {
+    font-size: 28px !important;
+    width: 80% !important;
+    line-height: 35px !important;
+  }
+  .section5 .container .section-info .count-down {
+    gap: 0px !important;
+  }
+  .section5 .container .section-info .count-down .time-unit {
+    font-size: 18px !important;
+    line-height: 20px !important;
+  }
+  .section5 .container .section-info .count-down .time-unit span {
+    font-size: 20px !important;
+  }
+  .section5 .container .section-info .count-down .time-unit .dot {
+    font-size: 10px !important;
+  }
 }/*# sourceMappingURL=style.css.map */
