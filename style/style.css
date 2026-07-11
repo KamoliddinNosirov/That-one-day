@@ -157,7 +157,7 @@ a {
 }
 .modal .hero .modal-main-info {
   position: absolute;
-  top: 100px;
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -192,10 +192,10 @@ a {
 }
 .modal .hero .modal-main-info .h1-tag {
   width: 550px;
-  font-size: 80px;
+  font-size: 70px;
   text-align: center;
   font-weight: 200;
-  line-height: 90px;
+  line-height: 75px;
 }
 .modal .hero .modal-main-info .lock {
   width: clamp(3.65rem, 5.8vw, 5.15rem);

@@ -120,9 +120,9 @@ const timerId = setInterval(() => {
 
 const client = {
   ru: {
-    pageTitle: "Камолиддин и Гулсанамхон | Свадебное приглашение",
-    metaDescription: "Свадебное приглашение Камолиддин и Гулсанамхон на 5 апреля 2026 года.",
-    previewImageAlt: "Свадебное приглашение Камолиддин и Гулсанамхон",
+    pageTitle: "Камолиддин и ********** | Свадебное приглашение",
+    metaDescription: "Свадебное приглашение Камолиддин и ********** на 5 апреля 2026 года.",
+    previewImageAlt: "Свадебное приглашение Камолиддин и **********",
     ariaIntro: "Экран открытия приглашения",
     ariaEnvelope: "Запечатанный бумажный конверт",
     ariaWeddingDate: "Дата свадьбы",
@@ -140,9 +140,9 @@ const client = {
     envelopeTopNote:
       "<span class=\"flap-note-top\">ВЫ</span><span class=\"flap-note-middle\">ПРИГЛАШЕНЫ</span><span class=\"flap-note-script\">на свадьбу</span>",
     withLove: "с любовью,",
-    signatureNames: "Камолиддин\u00a0и\u00a0Gulsanamxon",
+    signatureNames: "Камолиддин\u00a0и\u00a0**********",
     ornamentNames:
-      "<span class=\"ornament-name-line\">Камолиддин</span><span class=\"ornament-name-amp\">и</span><span class=\"ornament-name-line\">Гулсанамхон</span>",
+      "<span class=\"ornament-name-line\">Камолиддин</span><span class=\"ornament-name-amp\">и</span><span class=\"ornament-name-line\">**********</span>",
     ornamentMessage:
       "Аллах объединил их сердца любовью<br />(сура «Аль-Анфаль», аят 63)",
     ornamentDay: "05",
@@ -190,9 +190,9 @@ const client = {
     musicPauseLabel: "Остановить музыку",
   },
   uz: {
-    pageTitle: "Kamoliddin va Gulsanamxon | To'y taklifnomasi",
-    metaDescription: "Kamoliddin va Gulsanamxon 2026-yil 5-aprel kungi to'y taklifnomasi.",
-    previewImageAlt: "Kamoliddin va Gulsanamxon to'y taklifnomasi",
+    pageTitle: "Kamoliddin va ********** | To'y taklifnomasi",
+    metaDescription: "Kamoliddin va ********** 2026-yil 5-aprel kungi to'y taklifnomasi.",
+    previewImageAlt: "Kamoliddin va ********** to'y taklifnomasi",
     ariaIntro: "Taklifnomani ochish ekrani",
     ariaEnvelope: "Muhrlangan qog'oz konvert",
     ariaWeddingDate: "To'y sanasi",
@@ -210,9 +210,9 @@ const client = {
     envelopeTopNote:
       "<span class=\"flap-note-top\">SIZ</span><span class=\"flap-note-middle\">TO'YIMIZGA</span><span class=\"flap-note-script\">taklif etilgansiz</span>",
     withLove: "muhabbat ila,",
-    signatureNames: "Kamoliddin\u00a0va\u00a0Gulsanamxon",
+    signatureNames: "Kamoliddin\u00a0va\u00a0**********",
     ornamentNames:
-      "<span class=\"user_name\">Kamoliddin</span><br/><span class=\"ornament-name-amp\">va</span><br/><span class=\"user_name\">Gulsanamxon</span>",
+      "<span class=\"user_name\">Kamoliddin</span><br/><span class=\"ornament-name-amp\">va</span><br/><span class=\"user_name\">**********</span>",
     ornamentMessage:
       "Alloh ularni qalbini sevgi ila birlashtirdi<br />(Anfol surasi, 63-oyat)",
     ornamentDay: "05",
